@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+	h1= register
+	.container
+		.row
+			.col-md-4
+				form.form-horizontal(method="post",action="/reg")
+					.form-group
+						input#inputTitle.form-control(type="text", name="username")
+					.form-group
+						input#inputTitle.form-control(type="text", name="password")
+					.form-group
+						button.btn.btn-default(type="submit") submit
+		.row
+			each u in user
+				p #{u}

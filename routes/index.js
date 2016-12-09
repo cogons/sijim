@@ -8,7 +8,7 @@ var showdown = require('showdown');
 var session = require('express-session');
 var _ = require('underscore');
 
-mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds129038.mlab.com:29038/sijim');
+mongoose.connect('mongodb://m:m@ds129038.mlab.com:29038/sijim');
 //mongoose.connect('mongodb://localhost/blog2');
 
 var Article = models.Article;
@@ -20,7 +20,7 @@ router.use(bodyParser.urlencoded());
 router.use(session({
 	secret: 'recommand 128 bytes random string', // 建议使用 128 个字符的随机字符串
 	cookie: {
-		maxAge: 60 * 1000 * 1000
+		maxAge: 1000 * 60 * 60 * 24 * 7
 	}
 }));
 

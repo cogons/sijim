@@ -8,9 +8,8 @@ var showdown = require('showdown');
 var session = require('express-session');
 var _ = require('underscore');
 
-
-
-mongoose.connect('mongodb://localhost/blog2');
+mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds129038.mlab.com:29038/sijim');
+//mongoose.connect('mongodb://localhost/blog2');
 
 var Article = models.Article;
 var User = models.User;
